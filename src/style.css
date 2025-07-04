@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Alumni+Sans+SC:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+:root {
+    --progress-bar-height: 0.25rem;
+    --progress-bar-color: gainsboro;
+    --progress-bar-value-color: dodgerblue;
+    --progress-bar-value: 0%;
+    --white-background: #f4f4f4;
+}
+
+article {
+    position: relative;
+    padding: 1.5rem;
+    margin: 3.75rem auto;
+    max-width: 50rem;
+}
+
+.article-title {
+    position: sticky;
+    top: 0;
+    padding-bottom: 1.5rem;
+    z-index: 99;
+    background-color: var(--white-background);
+    width: 100%;
+}
+
+h1 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    padding: 1.125rem 2.5rem 1.125rem 0;
+    margin: 0;
+}
+
+.image-wrapper {
+    position: relative;
+    aspect-ratio: 16 / 9;
+    margin-bottom: 1.5rem;
+    overflow: hidden;
+    border-radius: 0.25rem;
+}
+
+.progress-wrapper {
+    position: relative;
+}
+
+.progress-label {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    font-size: 0.875rem;
+}
+
+progress {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    position: absolute;
+    width: 100%;
+    height: var(--progress-bar-height);
+    background-color: var(--progress-bar-color);
+    border: none;
+}
+
+progress::-moz-progress-bar {
+    background-color: var(--progress-bar-value-color);
+}
+
+progress::-webkit-progress-bar {
+    background-color: var(--progress-bar-color);
+}
+
+progress::-webkit-progress-value {
+    background-color: var(--progress-bar-value-color);
+    transition: width 0.1s ease;
+}
+
+progress::-ms-fill {
+    background-color: var(--progress-bar-value-color);
+}
